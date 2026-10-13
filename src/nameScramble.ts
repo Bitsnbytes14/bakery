@@ -43,6 +43,7 @@ export function initName(onDone: () => void) {
   let timers: number[] = [];
   let note = createNote();
   let session = 0;
+  let typedName = '';
 
   function build() {
     host.textContent = '';
@@ -72,6 +73,7 @@ export function initName(onDone: () => void) {
       e.preventDefault();
       const mine = session;
       const typed = input.value.trim();
+      typedName = typed;
       input.disabled = true;
       submit.hidden = true;
       display.hidden = false;
@@ -97,11 +99,14 @@ export function initName(onDone: () => void) {
   build();
 
   return {
+    /** What she typed before it was replaced; only read when she chooses to send her order. */
+    typed: () => typedName,
     focus() {
       host.querySelector<HTMLInputElement>('#name')?.focus({ preventScroll: true });
     },
     reset() {
       session++;
+      typedName = '';
       timers.forEach((t) => window.clearInterval(t));
       timers = [];
       note.cancel();

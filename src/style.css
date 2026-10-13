@@ -290,6 +290,10 @@ ul { list-style: none; }
   font-family: var(--font-head); font-weight: 800; font-size: 1.6rem; letter-spacing: .1em; text-transform: uppercase;
   color: var(--pistachio-deep); border: 4px solid currentColor; border-radius: var(--r-sm); padding: 0 var(--s-3); opacity: .75;
 }
+/* send to chef: the primary action, with Download and Share as quieter options below */
+.send { display: grid; justify-items: center; gap: var(--s-2); width: 100%; margin-top: var(--s-4); }
+.send__note { font-size: .9rem; font-weight: 700; color: var(--cocoa-soft); }
+.send .btn { max-width: 100%; }
 .foot { margin-top: var(--s-5); display: grid; gap: var(--s-4); justify-items: center; font-weight: 700; }
 
 /* ---------- >= 600px: large phones, small tablets ---------- */

@@ -1,3 +1,4 @@
+import { inject } from '@vercel/analytics';
 import './style.css';
 import { initDessertBox } from './dessertBox';
 import { $ } from './dom';
@@ -7,7 +8,11 @@ import { initName } from './nameScramble';
 import { initQuestions } from './questions';
 import { initReceipt } from './receipt';
 import { initReview } from './review';
+import { initSend } from './send';
 import { initShopfront } from './shopfront';
+
+// Vercel Web Analytics: page views only, no custom events and never any answers or typed text.
+inject();
 
 type ScreenName = 'shop' | 'name' | 'order' | 'review' | 'receipt';
 
@@ -24,6 +29,7 @@ let navigating = false;
 const box = initDessertBox();
 const orderMascot = mountMascot($('order-mascot'));
 const receipt = initReceipt();
+const send = initSend();
 const questions = initQuestions({
   box,
   mascot: orderMascot,
@@ -44,6 +50,7 @@ const review = initReview({
   // The receipt only exists once she has reviewed and asked for it.
   onGenerate: () => {
     receipt.show(questions.result());
+    send.setOrder(questions.result(), name.typed());
     void go('receipt');
   },
 });
@@ -100,5 +107,6 @@ $('new-order').addEventListener('click', () => {
   name.reset();
   review.reset();
   receipt.reset();
+  send.reset();
   void go('shop');
 });

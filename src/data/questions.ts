@@ -57,12 +57,12 @@ export const ITEMS: Item[] = [
     { label: 'Coffee', emoji: '☕', reaction: 'Allowed. Reluctantly. 😤', treat: T.coffee },
   ]),
   choice('Terrain', '🗻', 'Mountains or beaches?', [
-    { label: 'Mountains', emoji: '🏔️', reaction: "You climb for hours just to say 'nice view' and leave. Respect.", treat: T.cookie },
-    { label: 'Beaches', emoji: '🏖️', reaction: 'Sand will be found in your bag for six months. Bold 😌', treat: T.cupcake },
+    { label: 'Mountains', emoji: '🏔️', reaction: 'Correct answer. The chef is also a mountain person. This is going well 🏔️', treat: T.cookie },
+    { label: 'Beaches', emoji: '🏖️', reaction: 'The chef is a mountain person, but will allow it. Sand will be found in your bag for six months 😌', treat: T.cupcake },
   ]),
   choice('Messaging', '📱', 'Voice notes or texts?', [
-    { label: 'Voice notes', emoji: '🎙️', reaction: "A four minute voice note is not a message. It's a podcast 🎧", treat: T.donut },
-    { label: 'Texts', emoji: '💬', reaction: 'Efficient. The kitchen appreciates it.', treat: T.kaju },
+    { label: 'Voice notes', emoji: '🎙️', reaction: 'The chef also prefers voice notes. Finally, someone who gets it 🎧', treat: T.donut },
+    { label: 'Texts', emoji: '💬', reaction: 'Efficient. The chef prefers voice notes, but respects the typing.', treat: T.kaju },
   ]),
   choice('Late night', '🌙', 'Maggi at 2am or a proper meal?', [
     { label: 'Maggi', emoji: '🍜', reaction: 'Two minutes they promised. Twelve minutes it took. Every time.', treat: T.croissant },

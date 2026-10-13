@@ -74,8 +74,13 @@
           <span class="receipt__paid" aria-hidden="true">Paid</span>
         </div>
       </article>
+      <div class="send" id="send-block">
+        <p class="send__note">This sends your receipt to Ahmad <span aria-hidden="true">👨‍🍳</span></p>
+        <button type="button" class="btn btn--big" id="send">Send my order to the chef <span aria-hidden="true">📨</span></button>
+        <p class="status" id="send-status" role="status"></p>
+      </div>
       <div class="actions">
-        <button type="button" class="btn" id="download">Download receipt <span aria-hidden="true">🧾</span></button>
+        <button type="button" class="btn btn--ghost" id="download">Download receipt <span aria-hidden="true">🧾</span></button>
         <button type="button" class="btn btn--ghost" id="share">Share <span aria-hidden="true">📤</span></button>
       </div>
       <p class="status" id="receipt-status" role="status"></p>
