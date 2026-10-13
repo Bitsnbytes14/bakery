@@ -16,12 +16,14 @@ export function typeInto(el: HTMLElement, text: string, speed = 28): Promise<voi
     return Promise.resolve();
   }
   el.textContent = '';
+  // Step by code point so emoji never flash as broken characters mid-type.
+  const chars = Array.from(text);
   return new Promise((resolve) => {
     let i = 0;
     const tick = () => {
       i += 1;
-      el.textContent = text.slice(0, i);
-      if (i >= text.length) {
+      el.textContent = chars.slice(0, i).join('');
+      if (i >= chars.length) {
         timers.delete(el);
         resolve();
         return;

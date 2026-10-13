@@ -58,7 +58,7 @@ const name = initName(() => {
   void go('order');
   questions.start();
 });
-initShopfront(() => void go('name'));
+const shop = initShopfront(() => void go('name'));
 
 async function go(next: ScreenName) {
   if (navigating || next === current) return;
@@ -108,5 +108,5 @@ $('new-order').addEventListener('click', () => {
   review.reset();
   receipt.reset();
   send.reset();
-  void go('shop');
+  void go('shop').then(() => shop.play());
 });

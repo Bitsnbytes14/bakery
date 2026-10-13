@@ -3,7 +3,7 @@ import { $, el } from './dom';
 import type { OrderResult } from './questions';
 
 const NO_QUESTION = 'No questions. The chef is relieved.';
-const TOTAL_LINE = 'Total: 1 creativity, paid in full ✅';
+const TOTAL_LINE = 'Total: 1 creativity, a little odd, paid in full ✅';
 const C = { cream: '#fff8ea', paper: '#fffdf6', cocoa: '#4a2c1d', soft: '#7a5645', green: '#4f7d33', caramel: '#d9a066' };
 
 const today = () => new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -138,7 +138,11 @@ export function initReceipt() {
       y += 36;
       dash(true);
       y += 60;
-      put(TOTAL_LINE, L, `800 34px ${head}`, C.cocoa);
+      ctx.font = `800 34px ${head}`;
+      wrap(TOTAL_LINE, R - L).forEach((s, i) => {
+        if (i) y += 44;
+        put(s, L, `800 34px ${head}`, C.cocoa);
+      });
       stampY = y + 70;
       y += 150;
 

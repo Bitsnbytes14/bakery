@@ -17,15 +17,23 @@
 
   <main id="app" class="app">
     <!-- 1. Shop front -->
-    <section class="screen" id="screen-shop" aria-labelledby="shop-h">
+    <section class="screen screen--shop" id="screen-shop" aria-labelledby="shop-h">
+      <p class="stamp-badge" role="img" aria-label="Head Chef · Certified A Little Odd">
+        <span aria-hidden="true">Head Chef&nbsp;· Certified A Little Odd <span class="stamp-badge__emoji">🧁</span></span>
+      </p>
       <div class="sign" role="img" aria-label="Open sign: the bakery is open">
         <span class="sign__string sign__string--l"></span><span class="sign__string sign__string--r"></span>
         <span class="sign__board" aria-hidden="true">Open</span>
       </div>
       <div id="shop-mascot"></div>
-      <h1 id="shop-h" class="title" tabindex="-1">You said I lack creativity so I took that personally <span aria-hidden="true">😤</span></h1>
-      <p class="sub">So I opened a bakery. Obviously.</p>
-      <button type="button" class="btn btn--big" id="come-in">Come in <span class="bell" aria-hidden="true">🛎️</span></button>
+      <h1 id="shop-h" class="title" tabindex="-1">Different levels of creativity, they said.</h1>
+      <p class="sub shop-sub">
+        <span class="shop-sub__ghost" id="shop-sub-full" aria-hidden="true">Mine just happens to be... a little odd. 😤</span>
+        <span class="shop-sub__typed" id="shop-sub-text" aria-hidden="true"></span>
+        <span class="sr-only">Mine just happens to be... a little odd. 😤</span>
+      </p>
+      <p class="support">So I opened a bakery. Obviously.</p>
+      <button type="button" class="btn btn--big shop-cta" id="come-in">Come in <span class="bell" aria-hidden="true">🛎️</span></button>
     </section>
 
     <!-- 2. Name -->
@@ -68,7 +76,7 @@
           <ul class="receipt__list" id="receipt-list"></ul>
           <p class="label receipt__lbl">Question for the chef <span aria-hidden="true">🧑‍🍳</span></p>
           <p class="receipt__chefq" id="receipt-chefq"></p>
-          <p class="receipt__total">Total: 1 creativity, paid in full <span aria-hidden="true">✅</span></p>
+          <p class="receipt__total">Total: 1 creativity, a little odd, paid in full <span aria-hidden="true">✅</span></p>
           <div class="receipt__barcode" aria-hidden="true"></div>
           <p class="receipt__thanks">Thank you, come again <span aria-hidden="true">🍪</span></p>
           <span class="receipt__paid" aria-hidden="true">Paid</span>

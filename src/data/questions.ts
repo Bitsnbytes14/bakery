@@ -132,7 +132,7 @@ export const ITEMS: Item[] = [
     floor: 7,
     protests: ['are you sure? 🥲', 'reconsider 🙏', 'the chef has a family 😭'],
     accepted: 'The chef accepts this generous review 🧁',
-    perfect: 'Framing this. Hanging it in the kitchen 🖼️',
+    perfect: 'Not a little odd. Very odd. Thank you 🖼️',
     forced: 'Fine. Recorded 😔',
     acceptedTreat: T.cupcake,
     perfectTreat: T.brownie,
