@@ -248,7 +248,7 @@ export function initReceipt() {
             await navigator.share({ files: [file], title: 'The Bully Bakery receipt', text: 'My order from The Bully Bakery.' });
             say('Shared, by your choice.');
           } catch (e) {
-            say(e instanceof DOMException && e.name === 'AbortError' ? 'Share cancelled. Nothing was sent.' : 'Sharing failed.');
+            say(e instanceof DOMException && e.name === 'AbortError' ? 'Share cancelled.' : 'Sharing failed.');
           }
           return;
         }
@@ -257,7 +257,7 @@ export function initReceipt() {
         return;
       }
       download(blob);
-      say('Receipt downloaded. Nothing was sent anywhere.');
+      say('Receipt downloaded.');
     } catch {
       say('Could not print the receipt. The chef apologises.');
     } finally {

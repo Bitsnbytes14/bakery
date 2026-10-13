@@ -1,6 +1,6 @@
 # The Bully Bakery
 
-A tiny interactive bakery. Walk in, place an order by answering this-or-that questions, and collect a receipt. Vite + vanilla TypeScript + plain CSS. No framework, backend, tracking or env vars; answers live in memory only.
+A tiny interactive bakery. Walk in, place an order by answering this-or-that questions, and collect a receipt. Vite + vanilla TypeScript + plain CSS. No framework or backend. Answers live in memory and only leave the browser if the visitor taps "Send my order to the chef", which needs `VITE_WEB3FORMS_KEY` (see `.env.example`; the button hides without it). Vercel Web Analytics is included for page views.
 
 ## Run
 
