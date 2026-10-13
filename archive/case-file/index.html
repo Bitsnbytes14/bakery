@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Case File: Alleged Lack of Creativity. A developer opens an official investigation into himself." />
+  <meta name="theme-color" content="#d9bf8c" />
+  <title>Case File: Alleged Lack of Creativity</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Special+Elite&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip" href="#cover">Skip to case file</a>
+
+  <section id="cover" class="cover" aria-label="Cover">
+    <div class="folder" id="folder">
+      <div class="folder__back"></div>
+      <div class="folder__tab" aria-hidden="true">CRTV</div>
+      <button class="folder__flap" id="open-folder" type="button" aria-expanded="false" aria-controls="main">
+        <span class="case-no">CASE NO. 2026/CRTV/001</span>
+        <span class="folder__title">Case File</span>
+        <span class="folder__sub">Alleged Lack of Creativity</span>
+        <span class="stamp stamp--red folder__stamp" aria-hidden="true">Confidential</span>
+        <span class="folder__hint">Tap to open</span>
+      </button>
+    </div>
+  </section>
+
+  <main id="main" class="dossier" hidden tabindex="-1">
+    <div class="sheet">
+      <div class="paperclip" aria-hidden="true"></div>
+      <p class="case-no case-no--corner">CASE NO. 2026/CRTV/001</p>
+
+      <section class="section" id="complaint" aria-labelledby="complaint-h">
+        <p class="label">Form 1-A &middot; Statement of Complaint</p>
+        <h2 id="complaint-h" class="headline">You said I lack creativity so I took that personally.</h2>
+        <dl class="fields">
+          <div class="field"><dt class="label">Complainant</dt><dd>The Defendant (self-reported)</dd></div>
+          <div class="field"><dt class="label">Defendant</dt><dd>The Same Individual</dd></div>
+          <div class="field"><dt class="label">Alleged offense</dt><dd>Insufficient originality in the naming of things</dd></div>
+          <div class="field"><dt class="label">Witness</dt><dd>You, apparently</dd></div>
+        </dl>
+        <p class="body">
+          Whereas the Defendant did, on or about a recent occasion, propose a nickname; and whereas said nickname was
+          described by a third party as <span class="redact redact--static" aria-label="redacted">sounding like a chatbot wrote it</span>;
+          and whereas the Defendant, rather than reflect quietly like a reasonable adult, elected to open a formal
+          investigation into himself: the matter is hereby referred to you, the witness, for interview.
+        </p>
+        <p class="body">The Defendant has waived the right to be offended. He is offended anyway.</p>
+      </section>
+
+      <section class="section" id="evidence" aria-labelledby="evidence-h">
+        <p class="label">Form 2-B &middot; Schedule of Evidence</p>
+        <h2 id="evidence-h" class="headline headline--sm">Evidence on file</h2>
+
+        <article class="exhibit reveal" aria-labelledby="exA-h">
+          <header class="exhibit__head"><span class="tag">Exhibit A</span><h3 id="exA-h">The Nickname</h3></header>
+          <p class="body">Flagged by an independent reviewer as &ldquo;sounding like ChatGPT.&rdquo; The reviewer was not paid and did not need to be.</p>
+          <p class="label">Item on record</p>
+          <button type="button" class="redact redact--btn" id="redaction" aria-label="Redacted nickname. Activate to reveal.">
+            <span class="redact__bar" aria-hidden="true">████████████</span>
+          </button>
+          <p class="note">Reviewer notes: &ldquo;Smooth. Warm. Suspiciously well-structured.&rdquo;</p>
+        </article>
+
+        <article class="exhibit reveal" aria-labelledby="exB-h">
+          <header class="exhibit__head"><span class="tag">Exhibit B</span><h3 id="exB-h">Prior Offense</h3></header>
+          <p class="body">A documented pattern of recycling food-based nicknames. No names are given. The pantry is the only witness.</p>
+          <ul class="ledger">
+            <li><span>Incident 01</span><span>A baked good</span></li>
+            <li><span>Incident 02</span><span>A different baked good</span></li>
+            <li><span>Incident 03</span><span>The first baked good, again</span></li>
+            <li><span>Incident 04</span><span class="redact redact--static" aria-label="redacted">██████ ████</span></li>
+          </ul>
+          <p class="note">Status: filed as a prior. The pattern is, regrettably, a pattern.</p>
+        </article>
+
+        <article class="exhibit reveal" aria-labelledby="exC-h">
+          <header class="exhibit__head"><span class="tag">Exhibit C</span><h3 id="exC-h">Commit History</h3></header>
+          <p class="body">Submitted by the Defendant&rsquo;s own repository, against his interest.</p>
+          <ol class="commits" aria-label="Commit log, newest first">
+            <li><code>a91f3c2</code> actually final</li>
+            <li><code>7be04d8</code> final fix</li>
+            <li><code>3c1d9aa</code> fix again</li>
+            <li><code>e42b710</code> fix</li>
+            <li><code>0d5a6f1</code> it works (do not touch)</li>
+          </ol>
+          <p class="note">Observation: the word &ldquo;final&rdquo; appears twice. Neither was.</p>
+        </article>
+      </section>
+
+      <section class="section" id="interview-section" aria-labelledby="interview-h">
+        <p class="label">Form 3-C &middot; Witness Interview</p>
+        <h2 id="interview-h" class="headline headline--sm">The court will hear the witness</h2>
+        <p class="body">You have been summoned as the witness. Answer honestly or entertainingly. Answers stay in your browser and go nowhere.</p>
+        <div id="interview"></div>
+      </section>
+
+      <section class="section verdict" id="verdict" aria-labelledby="verdict-h" hidden>
+        <p class="label">Form 4-D &middot; Verdict</p>
+        <h2 id="verdict-h" class="headline headline--sm">The court will now rule</h2>
+        <button type="button" class="btn" id="deliver">Deliver the verdict</button>
+        <p class="pause" id="pause" role="status"></p>
+        <div class="verdict__stage" id="stage">
+          <div class="stamp stamp--red stamp--big" id="stamp-guilty" hidden>Guilty</div>
+        </div>
+        <p class="sentence" id="sentence" hidden>The defendant is sentenced to build a better website.</p>
+        <div class="verdict__stage verdict__stage--2">
+          <div class="stamp stamp--blue" id="stamp-served" hidden>Sentence served</div>
+        </div>
+        <p class="note" id="served-note" hidden>Note for the record: you are looking at it right now.</p>
+      </section>
+
+      <section class="section" id="statement" aria-labelledby="statement-h" hidden>
+        <p class="label">Form 5-E &middot; Witness Statement</p>
+        <h2 id="statement-h" class="headline headline--sm">Your signed statement</h2>
+        <article class="statement" aria-label="Witness statement">
+          <p class="case-no">CASE NO. 2026/CRTV/001</p>
+          <h3 class="statement__title">Statement of Witness</h3>
+          <p class="note statement__sub">In the matter of: Alleged Lack of Creativity</p>
+          <dl class="statement__list" id="statement-list"></dl>
+          <p class="label statement__lbl">Question for the defendant</p>
+          <p class="statement__defq" id="statement-defq"></p>
+          <div class="statement__sign">
+            <div><span class="statement__scrawl" aria-hidden="true">~ Witness ~</span><span class="label">Signature of witness</span></div>
+            <div><span id="statement-date"></span><span class="label">Date</span></div>
+          </div>
+          <span class="stamp stamp--red statement__stamp" aria-hidden="true">Sworn</span>
+        </article>
+        <div class="statement__actions">
+          <button type="button" class="btn" id="download">Download statement</button>
+          <button type="button" class="btn btn--ghost" id="share">Share</button>
+        </div>
+        <p class="note" id="statement-status" role="status"></p>
+      </section>
+
+      <footer class="foot" id="foot">
+        <p class="foot__line">Case closed. Built by Mohammad Ahmad</p>
+        <p><a href="https://github.com/Bitsnbytes14" target="_blank" rel="noopener noreferrer">github.com/Bitsnbytes14</a></p>
+        <button type="button" class="btn btn--ghost" id="reopen">Reopen case</button>
+      </footer>
+    </div>
+  </main>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

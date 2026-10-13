@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="The Bully Bakery: a tiny bakery built to prove a point. Place an order by answering this-or-that questions." />
+  <meta name="theme-color" content="#a9d18e" />
+  <title>The Bully Bakery</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip" href="#app">Skip to the bakery</a>
+  <div class="awning" aria-hidden="true"></div>
+
+  <main id="app" class="app">
+    <!-- 1. Shop front -->
+    <section class="screen" id="screen-shop" aria-labelledby="shop-h">
+      <div class="sign" role="img" aria-label="Open sign: the bakery is open">
+        <span class="sign__string sign__string--l"></span><span class="sign__string sign__string--r"></span>
+        <span class="sign__board" aria-hidden="true">Open</span>
+      </div>
+      <div id="shop-mascot"></div>
+      <h1 id="shop-h" class="title" tabindex="-1">You said I lack creativity so I took that personally <span aria-hidden="true">😤</span></h1>
+      <p class="sub">So I opened a bakery. Obviously.</p>
+      <button type="button" class="btn btn--big" id="come-in">Come in <span class="bell" aria-hidden="true">🛎️</span></button>
+    </section>
+
+    <!-- 2. Name -->
+    <section class="screen" id="screen-name" aria-label="Name for the order" hidden>
+      <div id="name-ticket"></div>
+    </section>
+
+    <!-- 3-5. Order -->
+    <section class="screen screen--order" id="screen-order" aria-label="Your order" hidden>
+      <div class="order-layout">
+        <div class="order-main">
+          <div id="order-mascot"></div>
+          <div id="order"></div>
+        </div>
+        <aside class="box" id="box" aria-label="Your dessert box">
+          <div class="box__head"><span>Dessert box <span aria-hidden="true">🎁</span></span><span id="box-count">0 of 15</span></div>
+          <ul class="box__items" id="box-items"></ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 6. Review -->
+    <section class="screen screen--top" id="screen-review" aria-labelledby="review-h" hidden>
+      <h2 id="review-h" class="title title--sm" tabindex="-1">Review your order <span aria-hidden="true">📝</span></h2>
+      <p class="sub">Tap any item to change it.</p>
+      <ul class="review" id="review-list"></ul>
+      <div class="actions">
+        <button type="button" class="btn btn--ghost" id="review-back">Back <span aria-hidden="true">👈</span></button>
+        <button type="button" class="btn" id="generate">Generate receipt <span aria-hidden="true">🧾</span></button>
+      </div>
+    </section>
+
+    <!-- 7-8. Receipt + footer -->
+    <section class="screen" id="screen-receipt" aria-labelledby="receipt-h" hidden>
+      <h2 id="receipt-h" class="title title--sm" tabindex="-1">Your order is ready <span aria-hidden="true">🎀</span></h2>
+      <article class="receipt" aria-label="Receipt">
+        <div class="receipt__inner">
+          <p class="receipt__brand">The Bully Bakery <span aria-hidden="true">🧁</span></p>
+          <p class="receipt__meta"><span>Order for: Miss Bully</span><span id="receipt-date"></span></p>
+          <ul class="receipt__list" id="receipt-list"></ul>
+          <p class="label receipt__lbl">Question for the chef <span aria-hidden="true">🧑‍🍳</span></p>
+          <p class="receipt__chefq" id="receipt-chefq"></p>
+          <p class="receipt__total">Total: 1 creativity, paid in full <span aria-hidden="true">✅</span></p>
+          <div class="receipt__barcode" aria-hidden="true"></div>
+          <p class="receipt__thanks">Thank you, come again <span aria-hidden="true">🍪</span></p>
+          <span class="receipt__paid" aria-hidden="true">Paid</span>
+        </div>
+      </article>
+      <div class="actions">
+        <button type="button" class="btn" id="download">Download receipt <span aria-hidden="true">🧾</span></button>
+        <button type="button" class="btn btn--ghost" id="share">Share <span aria-hidden="true">📤</span></button>
+      </div>
+      <p class="status" id="receipt-status" role="status"></p>
+      <footer class="foot">
+        <p>Made by Ahmad for Kavya <span aria-hidden="true">🍫</span></p>
+        <button type="button" class="btn btn--ghost" id="new-order">New order <span aria-hidden="true">🔄</span></button>
+      </footer>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
